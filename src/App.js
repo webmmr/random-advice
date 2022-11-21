@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
-  const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
+  // const [error, setError] = useState(null);
+  // const [isLoaded, setIsLoaded] = useState(false);
   const [rand, setRand] = useState(null);
   const [advice, setAdvice] = useState("");
 
@@ -17,13 +17,13 @@ function App() {
       .then(
         (result) => {
           const { advice } = result.slip;
-          setIsLoaded(true);
+          // setIsLoaded(true);
           setAdvice(advice);
         },
         (error) => {
           console.log(error);
-          setIsLoaded(true);
-          setError(error);
+          // setIsLoaded(true);
+          // setError(error);
         }
       );
   }, [rand]);
